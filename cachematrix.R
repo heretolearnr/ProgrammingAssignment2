@@ -2,12 +2,12 @@
 ##First Function: makeCacheMatrix, this function creates a special matrix object that can cache its own inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
-##The function takes an argument- x which is set to an empty matrix
+##The function takes an argument, x which is set to an empty matrix
         I<-NULL
         ## Sets the variable I equal to NULL
         
         set<-function(y){
-        ## set, the first element of the list is used to 
+        ## set, the first element of the list is used to assign the matrix, as entered by the user, to x
                 x<<-y
                 ## The value of the argument is assigned to x
                 I<<-NULL
@@ -41,6 +41,7 @@ cacheSolve <- function(x, ...) {
                 return(I)
         }
         ## The value of inverse, if not NULL, is returned. If NULL, it is calculated in steps below
+        
         data<-x$get()
         ## The get function, also an element of the list defined in the makeCacheMatrix, is used to assign the matrix to the variable (data)
         
