@@ -49,6 +49,5 @@ cacheSolve <- function(x, ...) {
         ## solve function is used to calculate the inverse of the matrix
         
         x$setInverse(I) ## The newly calculated value is passed as an argument to the set function
-        
         I ## The value of inverse is returned
 }
